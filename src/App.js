@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HeaderBar from './components/HeaderBar';
 import {Layout, Menu} from 'antd';
+import ItemList from './components/list-item/ItemList';
 const {Header, Content, Footer} = Layout;
 
 class App extends React.Component {
@@ -19,7 +20,9 @@ class App extends React.Component {
             background: '#fff',
             padding: 24,
             minHeight: 280
-          }}>Content</div>
+          }}>
+            <ItemList/>
+          </div>
         </Content>
         <Footer style={{
           textAlign: 'center'
