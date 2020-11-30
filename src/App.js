@@ -18,6 +18,7 @@ const { Header, Content, Footer } = Layout;
 class App extends React.Component {
   render() {
     return (
+      <Router>
       <div>
         <Layout className="layout">
           <HeaderBar />
@@ -49,6 +50,7 @@ class App extends React.Component {
           }}>React Redux Workshop ©2012-2021 Created by Nextflow.in.th</Footer>
         </Layout>,
       </div>
+      </Router>
     );
   }
 }
