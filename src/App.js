@@ -48,7 +48,11 @@ class App extends React.Component {
           <Footer style={{
             textAlign: 'center'
           }}>React Redux Workshop ©2012-2021 Created by Nextflow.in.th</Footer>
-        </Layout>,
+        <Switch>
+          <ModalRoute path='/add-new-item' parentPath='/' >
+            Hello
+          </ModalRoute>
+        </Switch>
       </div>
       </Router>
     );
