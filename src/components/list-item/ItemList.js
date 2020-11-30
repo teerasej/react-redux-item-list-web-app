@@ -1,7 +1,11 @@
 import { List, Typography } from 'antd';
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 
 export default function ItemList() {
+
+    const items = useSelector(state => state.items)
 
     const data = [
         'Racing car sprays burning fuel into crowd.',
@@ -13,12 +17,17 @@ export default function ItemList() {
 
     return (
         <List
-            header={<div>Header</div>}
+            header={<div>Store</div>}
             bordered
-            dataSource={data}
+            dataSource={items}
             renderItem={item => (
                 <List.Item>
-                    <Typography.Text mark>[ITEM]</Typography.Text> {item}
+                    <div>{item.name}</div>
+                    <div>
+                        <Typography.Text mark>
+                            {item.status}
+                        </Typography.Text>
+                    </div>
                 </List.Item>
             )}
         />
