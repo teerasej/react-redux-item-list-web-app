@@ -3,12 +3,14 @@ import { Form, Input, Button, Select } from 'antd';
 import { Link } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import Action from '../../redux/action'
+import { useHistory } from "react-router-dom";
 
 const { Option } = Select;
 
 export default function NewItemForm() {
 
     const dispatch = useDispatch()
+    const history = useHistory();
 
     const layout = {
         labelCol: { span: 8 },
@@ -26,6 +28,7 @@ export default function NewItemForm() {
             type: Action.CREATE_NEW_ITEM,
             payload: values
         })
+        history.goBack();
     };
 
     return (
