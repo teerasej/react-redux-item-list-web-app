@@ -53,11 +53,11 @@ export default function NewItemForm() {
                     <Button type="primary" htmlType="submit">
                         Create
                     </Button>
-                    <Link to="/">
+                    
                         <Button htmlType="button">
                             Cancel
                         </Button>
-                    </Link>
+                   
                 </Form.Item>
             </Form>
         </div>

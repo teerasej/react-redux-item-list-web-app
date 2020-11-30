@@ -6,12 +6,7 @@ import HeaderBar from './components/HeaderBar';
 import { Layout, Row, Col, Button, Divider } from 'antd';
 import ItemList from './components/list-item/ItemList';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Link
-} from "react-router-dom";
-import { ModalContainer,ModalRoute } from 'react-router-modal';
+
 import NewItemForm from './components/new-item/NewItemForm';
 
 const { Header, Content, Footer } = Layout;
@@ -19,7 +14,7 @@ const { Header, Content, Footer } = Layout;
 class App extends React.Component {
   render() {
     return (
-      <Router>
+    
       <div>
         <Layout className="layout">
           <HeaderBar />
@@ -36,9 +31,9 @@ class App extends React.Component {
               <Row gutter={16}>
                 <Col span={20}></Col>
                 <Col span={4}>
-                  <Link to="/add-new-item">
+                  
                     <Button type="primary" size="large" block>Add Item</Button>
-                  </Link>
+                  
                 </Col>
               </Row>
               <Divider/>
@@ -52,12 +47,9 @@ class App extends React.Component {
             textAlign: 'center'
           }}>React Redux Workshop ©2012-2021 Created by Nextflow.in.th</Footer>
         </Layout>
-        <Switch>
-          <ModalRoute path='/add-new-item' parentPath='/' component={NewItemForm}/>
-        </Switch>
-        <ModalContainer />
+       
       </div>
-      </Router>
+      
     );
   }
 }
