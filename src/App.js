@@ -36,7 +36,7 @@ class App extends React.Component {
                 <Col span={20}></Col>
                 <Col span={4}>
                   <Link to="/add-new-item">
-                  <Button type="primary" size="large" block>Add Item</Button>
+                    <Button type="primary" size="large" block>Add Item</Button>
                   </Link>
                 </Col>
               </Row>
@@ -44,12 +44,13 @@ class App extends React.Component {
               <Row gutter={16}>
                 <Col span={24}><ItemList /></Col>
               </Row>
-              
+
             </div>
           </Content>
           <Footer style={{
             textAlign: 'center'
           }}>React Redux Workshop ©2012-2021 Created by Nextflow.in.th</Footer>
+        </Layout>
         <Switch>
           <ModalRoute path='/add-new-item' parentPath='/' >
             Hello
