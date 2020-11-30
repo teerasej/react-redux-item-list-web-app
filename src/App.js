@@ -12,6 +12,7 @@ import {
   Link
 } from "react-router-dom";
 import { ModalContainer,ModalRoute } from 'react-router-modal';
+import NewItemForm from './components/new-item/NewItemForm';
 
 const { Header, Content, Footer } = Layout;
 
@@ -52,9 +53,7 @@ class App extends React.Component {
           }}>React Redux Workshop ©2012-2021 Created by Nextflow.in.th</Footer>
         </Layout>
         <Switch>
-          <ModalRoute path='/add-new-item' parentPath='/' >
-            Hello
-          </ModalRoute>
+          <ModalRoute path='/add-new-item' parentPath='/' component={NewItemForm}/>
         </Switch>
         <ModalContainer />
       </div>
