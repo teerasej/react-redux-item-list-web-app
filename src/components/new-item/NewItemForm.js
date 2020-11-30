@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Input, Button, Select } from 'antd';
+import { Link } from "react-router-dom";
 
 const { Option } = Select;
 
@@ -41,9 +42,11 @@ export default function NewItemForm() {
                     <Button type="primary" htmlType="submit">
                         Create
                     </Button>
-                    <Button htmlType="button">
-                        Cancel
-                    </Button>
+                    <Link to="/">
+                        <Button htmlType="button">
+                            Cancel
+                        </Button>
+                    </Link>
                 </Form.Item>
             </Form>
         </div>
