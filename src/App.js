@@ -35,7 +35,9 @@ class App extends React.Component {
               <Row gutter={16}>
                 <Col span={20}></Col>
                 <Col span={4}>
+                  <Link to="/add-new-item">
                   <Button type="primary" size="large" block>Add Item</Button>
+                  </Link>
                 </Col>
               </Row>
               <Divider/>
