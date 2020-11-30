@@ -55,6 +55,7 @@ class App extends React.Component {
             Hello
           </ModalRoute>
         </Switch>
+        <ModalContainer />
       </div>
       </Router>
     );
