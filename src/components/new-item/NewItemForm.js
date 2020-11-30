@@ -1,10 +1,14 @@
 import React from 'react'
 import { Form, Input, Button, Select } from 'antd';
 import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import Action from '../../redux/action'
 
 const { Option } = Select;
 
 export default function NewItemForm() {
+
+    const dispatch = useDispatch()
 
     const layout = {
         labelCol: { span: 8 },
@@ -18,6 +22,10 @@ export default function NewItemForm() {
 
     const onFinish = values => {
         console.log(values);
+        dispatch({ 
+            type: Action.CREATE_NEW_ITEM,
+            payload: values
+        })
     };
 
     return (
