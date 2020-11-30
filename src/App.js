@@ -1,9 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'react-router-modal/css/react-router-modal.css';
 import HeaderBar from './components/HeaderBar';
 import { Layout, Row, Col, Button, Divider } from 'antd';
 import ItemList from './components/list-item/ItemList';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Link
+} from "react-router-dom";
+import { ModalContainer,ModalRoute } from 'react-router-modal';
+
 const { Header, Content, Footer } = Layout;
 
 class App extends React.Component {
