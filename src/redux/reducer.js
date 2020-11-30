@@ -1,6 +1,7 @@
 import Action from './action' 
 
 const initialState = {
+    items: []
     
 }
 
