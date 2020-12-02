@@ -1,9 +1,10 @@
 import React from 'react'
 import { Form, Input, Button, Select } from 'antd';
 import { Link } from "react-router-dom";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import Action from '../../redux/action'
 import { useHistory } from "react-router-dom";
+import Axios from 'axios';
 
 const { Option } = Select;
 
@@ -22,8 +23,11 @@ export default function NewItemForm() {
 
     const [form] = Form.useForm();
 
-    const onFinish = values => {
+    const onFinish = async (values) => {
         console.log(values);
+
+        await Axios.post('http://localhost:3010/notes', values)
+
         dispatch({ 
             type: Action.CREATE_NEW_ITEM,
             payload: values
@@ -39,16 +43,9 @@ export default function NewItemForm() {
                 width: 350
             }}>
             <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                <Form.Item name="name" label="Name" rules={[{ required: true }]}>
+                <Form.Item name="message" label="Message" rules={[{ required: true }]}>
                     <Input />
                 </Form.Item>
-                <Form.Item name="status" label="Status" rules={[{ required: true }]}>
-                    <Select placeholder="Status">
-                        <Option value="instock">In Stock</Option>
-                        <Option value="preorder">Pre-order</Option>
-                    </Select>
-                </Form.Item>
-                
                 <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
                         Create
