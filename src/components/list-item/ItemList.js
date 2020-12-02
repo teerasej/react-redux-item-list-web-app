@@ -26,12 +26,12 @@ export default function ItemList() {
 
     return (
         <List
-            header={<div>Store</div>}
+            header={<div>Notes</div>}
             bordered
             dataSource={items}
             renderItem={item => (
                 <List.Item>
-                    <div>{item.name}</div>
+                    <div>{item.message}</div>
                     <div>
                         <Typography.Text mark>
                             {item.status}
