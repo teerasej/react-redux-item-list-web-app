@@ -1,6 +1,7 @@
 import { List, Typography } from 'antd';
 import React from 'react'
 import { useEffect } from 'react'
+import Axios from 'axios';
 
 
 export default function ItemList() {
@@ -9,6 +10,9 @@ export default function ItemList() {
 
     useEffect(() => {
         const loadMessage = async () => {
+            const notes = await Axios.get('http://localhost:3010/notes')
+            console.log('notes loaded:', notes.data);
+
         }
         loadMessage();
     }, [])
