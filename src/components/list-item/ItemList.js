@@ -1,19 +1,17 @@
 import { List, Typography } from 'antd';
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 
 export default function ItemList() {
 
     const items = useSelector(state => state.items)
 
-    const data = [
-        'Racing car sprays burning fuel into crowd.',
-        'Japanese princess to wed commoner.',
-        'Australian walks 100km after outback crash.',
-        'Man charged over missing wedding girl.',
-        'Los Angeles battles huge wildfires.',
-    ];
+    useEffect(() => {
+        const loadMessage = async () => {
+        }
+        loadMessage();
+    }, [])
 
     return (
         <List
